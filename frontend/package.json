@@ -13,7 +13,8 @@
     "microsoft-cognitiveservices-speech-sdk": "^1.26.0",
     "openai": "^3.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-spring": "^9.7.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

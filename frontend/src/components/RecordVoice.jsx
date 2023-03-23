@@ -2,11 +2,12 @@ import React, {useState, useRef, useEffect} from 'react';
 import WhisperTranscription from "./Whisper_API.jsx";
 import * as sdk from "microsoft-cognitiveservices-speech-sdk";
 import axios from 'axios';
-
+import './RecordVoice.css';
 
 const VoiceRecorder = () => {
     const [isRecording, setIsRecording] = useState(false);
     const [transcript, setTranscript] = useState('');
+    const [answer, setAnswer] = useState('');
     const mediaRecorder = useRef(null);
     const recordedChunks = useRef([]);
 
@@ -46,7 +47,6 @@ const VoiceRecorder = () => {
     }
 
 
-
     const stopRecording = () => {
         if (mediaRecorder.current && mediaRecorder.current.state !== 'inactive') {
             mediaRecorder.current.stop();
@@ -68,6 +68,8 @@ const VoiceRecorder = () => {
         console.log(response.data);
         const answer = response.data.response;
 
+        // set answer
+        setAnswer(answer);
 
         // speak
         const speechConfig = sdk.SpeechConfig.fromSubscription(import.meta.env.VITE_SPEECH_KEY, import.meta.env.VITE_SPEECH_REGION);
@@ -96,10 +98,15 @@ const VoiceRecorder = () => {
 
     return (
         <div>
-            <button onClick={isRecording ? stopRecording : startRecording}>
+            <button className={"record-button"} onClick={isRecording ? stopRecording : startRecording}>
                 {isRecording ? 'Stop Recording' : 'Start Recording'}
             </button>
-            {/*<p>{transcript}</p>*/}
+            <div className={"transcript"}>
+                {/*<p>{transcript ? Du: {transcript} : 'Start Recording'}</p>*/}
+                <p>{transcript ? 'Du: ' + transcript : ''}</p>
+                <p>{answer ? 'Mia: ' + answer : ''}</p>
+
+            </div>
         </div>
     );
 };

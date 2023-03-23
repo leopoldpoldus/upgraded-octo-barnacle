@@ -195,13 +195,7 @@ def get_embedding(text, model="text-embedding-ada-002"):
 
 
 if __name__ == "__main__":
-    chat = ChatGPT(stream= True)
+    chat = ChatGPT()
     while True:
         message = input("Enter message: ")
-        full = ""
-        for message in chat.chat(message):
-            res = message['choices'][0]['delta']
-            if "content" in res:
-                res = res["content"]
-                full += res
-            print(full)
+        answer = chat.chat(message)

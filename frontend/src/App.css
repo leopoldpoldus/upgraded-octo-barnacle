@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.app {
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*background-image: url("./head.png");*/
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+  bottom: 40%;
+}

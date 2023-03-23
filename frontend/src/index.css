@@ -12,6 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  background-image: url("./head.png");
+  background-position: center;
+  /*background-height: 80%;*/
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 a {
