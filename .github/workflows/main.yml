@@ -16,7 +16,7 @@ jobs:
     - name: Build frontend
       run: docker build -t poldus47/frontend:latest -f frontend/frontend.Dockerfile frontend
     - name: Login to Docker Hub
-      run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
+      run: docker login -u poldus47 -p "${{ secrets.DOCKER_PASSWORD }}"
     - name: Push backend
       run: docker push poldus47/backend:latest
     - name: Push frontend 
