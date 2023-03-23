@@ -2,3 +2,5 @@ openai
 python-dotenv
 flask
 flask-cors
+numpy
+pymilvus
