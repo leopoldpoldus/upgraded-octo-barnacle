@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_a5250ef5ffed4ed9a898a99d9195b5e2 }}/frontendmostlynaive:${{ github.sha }}
-        file: ./Dockerfile
+        file: ./frontend/frontend.Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
