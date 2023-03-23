@@ -11,8 +11,6 @@ workdir = os.path.dirname((os.path.abspath(__file__)))
 sys.path.append(workdir)
 dotenv.load_dotenv(os.path.join(workdir, '.env'))
 
-from VectorDatabase import VectorDatabase
-
 app = flask.Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
