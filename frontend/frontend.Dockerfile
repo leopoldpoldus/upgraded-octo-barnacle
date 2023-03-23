@@ -9,6 +9,7 @@ COPY frontend/package.json /app
 RUN cd /app && npm install
 #RUN npm install -g serve
 
+
 # Copy the rest of the app's code
 COPY ./frontend /app
 WORKDIR /app
