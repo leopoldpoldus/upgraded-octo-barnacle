@@ -3,7 +3,7 @@ FROM node:18-slim
 # Create a directory for the app and copy the package.json file
 RUN mkdir -p /app
 
-COPY ./frontend/package.json /app
+COPY frontend/package.json /app
 
 # Install dependencies
 RUN cd /app && npm install
