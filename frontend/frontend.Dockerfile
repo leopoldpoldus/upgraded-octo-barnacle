@@ -1,4 +1,4 @@
-FROM node:18-slim
+FROM node:18
 
 # Create a directory for the app and copy the package.json file
 RUN mkdir -p /app
