@@ -12,12 +12,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build backend
-      run: docker build -t "${{ secrets.DOCKER_USERNAME }}"/backend:latest -f backend/backend.Dockerfile backend
+      run: docker build -t poldus47/backend:latest -f backend/backend.Dockerfile backend
     - name: Build frontend
-      run: docker build -t "${{ secrets.DOCKER_USERNAME }}"/frontend:latest -f frontend/frontend.Dockerfile frontend
+      run: docker build -t poldus47/frontend:latest -f frontend/frontend.Dockerfile frontend
     - name: Login to Docker Hub
       run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
     - name: Push backend
-      run: docker push "${{ secrets.DOCKER_USERNAME }}"/backend:latest
+      run: docker push poldus47/backend:latest
     - name: Push frontend 
-      run: docker push "${{ secrets.DOCKER_USERNAME }}"/frontend:latest
+      run: docker push poldus47/frontend:latest
