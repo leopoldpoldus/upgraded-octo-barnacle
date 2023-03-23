@@ -14,6 +14,6 @@ COPY . /app
 WORKDIR /app
 
 
-# Expose port 5173 and run the app
-EXPOSE 5173
+# Expose port 3000 and run the app
+EXPOSE 3000
 CMD ["npm", "run", "dev"]

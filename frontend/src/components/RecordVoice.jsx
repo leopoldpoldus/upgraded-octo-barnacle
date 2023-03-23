@@ -63,7 +63,7 @@ const VoiceRecorder = () => {
         // props.getTranscript(transcript_new);
 
         // send transcript to backend
-        const url = 'http://backend:5000/api/chatbot';
+        const url = '/api/chatbot';
         const response = await axios.get(url, {params: {text: transcript_new}})
         console.log(response.data);
         const answer = response.data.response;

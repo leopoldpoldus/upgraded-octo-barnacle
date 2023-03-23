@@ -4,7 +4,7 @@ from GPT_API import ChatGPT
 from flask_cors import CORS
 
 app = flask.Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 chat_bot = ChatGPT()
 
@@ -21,4 +21,4 @@ def chat():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
