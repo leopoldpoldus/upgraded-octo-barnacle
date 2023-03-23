@@ -23,4 +23,4 @@ RUN cd /app
 
 # Expose port 5000 and run the app
 EXPOSE 5000
-CMD ["flask", "run"]
+CMD ["python", "/app/app.py"]

@@ -18,3 +18,7 @@ def chat():
 
     answer = chat_bot.chat(message)
     return {"response": answer}
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
