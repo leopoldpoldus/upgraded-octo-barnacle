@@ -1,0 +1,29 @@
+actions:
+
+  play_a_game:
+    name: "play_a_game"
+    description: "Play who am I game"
+    instruction: "Play a game of who am I"
+    args:
+        game_name:
+            description: "The name of the game to play"
+            example: "who am I"
+            optional: false
+    format: "JSON format like {'game_name': 'who am I'}"
+
+  show_family_picture:
+    name: "show_family_picture"
+    description: "Show a family picture"
+    instruction: "Show a family picture"
+    args:
+        picture_name:
+            description: "The name of the picture to show one of ['family', 'wife', 'children']"
+            example: "family"
+            optional: false
+    format: "JSON format like {'picture_name': 'family'}"
+
+  no_action:
+    name: "no_action"
+    description: "No action"
+    args: {}
+    format: "JSON format like {}"
